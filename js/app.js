@@ -58,21 +58,21 @@ var loadPagesInfo = function(pages){
   var counter = 0, //計算現在讀完資料沒
       current = $('<div class="current"></div>').appendTo($listRoot); //定位當前的資料
 
-  pages.forEach(function(item, index){
-    //從 template 塞資料
-    var $page = $(tmpl).clone();
-    FB.api(item.id, function(response){
-      // 塞 name, about, like 數到 html 裡。
-      FB.api(/*輸入圖片連結*/, function(response){
-        // 塞資料到 html 中
-        counter++;
-        // 塞完資料以後處理一下斷行
-        if(counter===pages.length){
-          // 利用 .current div:nth-child(3n)，讓每三個page 斷行
-          current.children('div').unwrap();
-        }
-      });
-    });
-  });
-};
+//   pages.forEach(function(item, index){
+//     //從 template 塞資料
+//     var $page = $(tmpl).clone();
+//     FB.api(item.id, function(response){
+//       // 塞 name, about, like 數到 html 裡。
+//       FB.api(/*輸入圖片連結*/, function(response){
+//         // 塞資料到 html 中
+//         counter++;
+//         // 塞完資料以後處理一下斷行
+//         if(counter===pages.length){
+//           // 利用 .current div:nth-child(3n)，讓每三個page 斷行
+//           current.children('div').unwrap();
+//         }
+//       });
+//     });
+//   });
+// };
 
