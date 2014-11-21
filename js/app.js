@@ -65,7 +65,7 @@ var loadPagesInfo = function(pages){
       // 塞 name, about, like 數到 html 裡。
       $page.find('.title a').text(response.name).attr('href',response.link);
       $page.find('.about').text(response.about);
-      $page.find('likes').text(response.likes);
+      $page.find('.likes').text(response.likes);
       FB.api(/*輸入圖片連結*/, function(response){
         // 塞資料到 html 中
         counter++;
